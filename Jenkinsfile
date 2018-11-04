@@ -1,9 +1,10 @@
 pipeline {
 agent any
-  stages{
-  
-    stage ('build'){
-    sh 'ant -f build.xml -v'
+  stages{  
+    stage('build'){
+      steps{
+      sh 'echo "master" hostname'
+    }
     }
   }
 }
